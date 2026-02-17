@@ -24,7 +24,20 @@ const BookingService = {
     
     if (error) throw new Error(error.message);
     return data;
+  },
+
+  // 3. Update a Booking by bookingId
+  async updateBooking(bookingId, bookingData) {
+    const { data, error } = await supabase
+      .from('bookings')
+      .update(bookingData)
+      .eq('id', bookingId)
+      .select();
+
+    if (error) throw new Error(error.message);
+    return data[0];
   }
+
 };
 
 module.exports = BookingService;
