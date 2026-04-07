@@ -1,6 +1,6 @@
 {
-    "name": "rideshare_app",
-    "short_name": "rideshare_app",
+    "name": "voyager",
+    "short_name": "voyager",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
